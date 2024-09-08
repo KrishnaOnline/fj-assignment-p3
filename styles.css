@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.heights-input {
+    padding: 10px;
+    width: 300px;
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    width: 50%;
+    background-color: #fff;
+}
+
+.bar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.bar-table td {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.height-bar-cell {
+    background-color: #FFF852;
+}
+
+.water-bar-cell {
+    background-color: #45B2EA;
+}
