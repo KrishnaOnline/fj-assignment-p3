@@ -1,20 +1,16 @@
 const getWaterLevels = (height) => {
     let n=height.length, lMax=0, rMax=0;
+    let l=0, r=n-1;
     let res = new Array(n).fill(0);
-    let leftMax = [];    
-    for(let i=0; i<n; i++) {
-        lMax = Math.max(lMax, height[i]);
-        leftMax[i] = lMax;
-    }
-    let rightMax = [];
-    for(let i=n-1; i>=0; i--) {
-        rMax = Math.max(rMax, height[i]);
-        rightMax[i] = rMax;
-    }
-    for(let i=0; i<n; i++) {
-        let minMax = Math.min(leftMax[i], rightMax[i]);
-        if(minMax > height[i]) {
-            res[i] = minMax-height[i];
+    while(l<=r) {
+        if(height[l] <= height[r]) {
+            lMax = Math.max(lMax, height[l]);
+            res[l] = lMax-height[l];
+            l++;
+        } else {
+            rMax = Math.max(rMax, height[r]);
+            res[r] = rMax-height[r];
+            r--;
         }
     }
     console.log(res);
